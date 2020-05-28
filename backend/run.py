@@ -17,7 +17,7 @@ BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 
 UPLOAD_FOLDER = '/Users/shashwatsingh/Desktop/work/Simpdf/backend/upload'
 PDF_TO_HTML_FOLDER = '/Users/shashwatsingh/Desktop/work/Simpdf/backend/pdf2html/'
-folder_name = "pdf2html"
+
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
@@ -28,12 +28,12 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def convert2html(self, file):
     print(file)
     filename = file.split('/')[-1]
-    command = 'pdf2htmlEX --external-hint-tool=ttfautohint {} ./{}/{}.html'.format(file,folder_name, filename)
+    command = 'pdf2htmlEX --external-hint-tool=ttfautohint {} ./pdf2html/{}.html'.format(file, filename)
     # print ("Executing " + command)
     process = subprocess.Popen(command, stdout = subprocess.PIPE, shell=True)
     output, err = process.communicate()
     
-    html_file_location = './' + folder_name + '/' + filename + ".html"
+    html_file_location = './' + 'pdf2html' + '/' + filename + ".html"
     f = open(html_file_location)
     s = f.read()
 
