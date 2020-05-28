@@ -41,7 +41,7 @@ Run server:
 ## Steps
 
 1. Upload a PDF file
-![Image of Yaktocat](https://github.com/shashanoid/Simpdf/blob/master/Screenshots/Home.png?raw=true)
+![Image of Yaktocat](https://github.com/shashanoid/Simpdf/blob/master/Screenshots/Home-new.png?raw=true)
 
 2. All the elements of the pdf file are now editable.
 
