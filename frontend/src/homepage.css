@@ -1,4 +1,28 @@
 .homepage-container {
   text-align: center;
-  padding-top: 18%;
+  padding-top: 14%;
+  background-color: #beeaef;
+  padding-bottom: 32px;
+}
+
+.title{
+  font-size: 42px;
+}
+
+.plant-left{
+  position: fixed;
+  bottom: 0;
+}
+
+.plant-right{
+  float: right;
+}
+
+.plant-center{
+    width:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+    text-align: center;
+    bottom: 10px;
 }

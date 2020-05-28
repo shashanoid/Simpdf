@@ -2,6 +2,7 @@ import React from "react";
 
 import { uploadService } from "./utils";
 import { history } from "./history";
+import "./fileupload.css"
 
 // Redux
 import { bindActionCreators } from "redux";
@@ -33,7 +34,7 @@ class FileUpload extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleUploadImage}>
+      <form className="form-container" onSubmit={this.handleUploadImage}>
         <div>
           <input
             ref={(ref) => {
@@ -44,7 +45,7 @@ class FileUpload extends React.Component {
         </div>
         <br />
         <div>
-          <button>Upload</button>
+          <button>Parse</button>
         </div>
       </form>
     );
