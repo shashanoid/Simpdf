@@ -15,8 +15,8 @@ logger = logging.getLogger('HELLO WORLD')
 BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 
 
-UPLOAD_FOLDER = '/Users/shashwatsingh/Desktop/simpdf/backend/'
-PDF_TO_HTML_FOLDER = '/Users/shashwatsingh/Desktop/simpdf/backend/pdf2html/'
+UPLOAD_FOLDER = '/Users/shashwatsingh/Desktop/work/Simpdf/backend/upload'
+PDF_TO_HTML_FOLDER = '/Users/shashwatsingh/Desktop/work/Simpdf/backend/pdf2html/'
 folder_name = "pdf2html"
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
@@ -52,7 +52,7 @@ def index():
 
 @app.route('/upload', methods=['POST'])
 def fileUpload():
-    target=os.path.join(UPLOAD_FOLDER,'upload')
+    target=UPLOAD_FOLDER
     if not os.path.isdir(target):
         os.mkdir(target)
     logger.info("welcome to upload`")
