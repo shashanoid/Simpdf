@@ -43,7 +43,7 @@ Run server:
 1. Upload a PDF file
 ![Image of Yaktocat](https://github.com/shashanoid/Simpdf/blob/master/Screenshots/Home.png?raw=true)
 
-2. All the elements of the pdf file are not editable.
+2. All the elements of the pdf file are now editable.
 
 ![Image of Yaktocat](https://github.com/shashanoid/Simpdf/blob/master/Screenshots/edit.png?raw=true)
 
