@@ -21,10 +21,10 @@ export default class HomePage extends React.Component {
           <br />
           <FileUpload />
         </div>
-        <div>
+        <div className="plants">
 
           <div className="plant-left">
-            <img src="https://ozgrozer.github.io/hdt/objects/sceneHomePlant.svg"/>
+            <img height={'400px'} src="https://ozgrozer.github.io/hdt/objects/sceneHomePlant.svg"/>
           </div>
 
           <div className="plant-center">
@@ -34,7 +34,7 @@ export default class HomePage extends React.Component {
 
 
           <div className="plant-right">
-            <img src="https://ozgrozer.github.io/hdt/objects/scenePlantPlantLeft.svg"/>
+            <img height={'400px'} src="https://ozgrozer.github.io/hdt/objects/scenePlantPlantLeft.svg"/>
           </div>
 
           

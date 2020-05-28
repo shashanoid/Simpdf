@@ -9,20 +9,27 @@
   font-size: 42px;
 }
 
+.plants{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .plant-left{
-  position: fixed;
-  bottom: 0;
+  /* position: fixed; */
 }
 
 .plant-right{
   float: right;
+  position: relative;
+  bottom: 0;
 }
 
 .plant-center{
     width:100%;
     position: absolute;
     left: 0;
-    bottom: 0; 
+    bottom: 24px; 
     text-align: center;
-    bottom: 10px;
 }
