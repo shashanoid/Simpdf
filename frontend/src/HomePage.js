@@ -2,11 +2,13 @@ import React from "react";
 import FileUpload from "./FileUpload";
 
 import "./homepage.css";
-import '../assets/leftplant.svg'
+import "../assets/leftplant.svg";
 
 export default class HomePage extends React.Component {
   constructor(props) {
     super(props);
+
+
   }
 
   render() {
@@ -22,22 +24,24 @@ export default class HomePage extends React.Component {
           <FileUpload />
         </div>
         <div className="plants">
-
           <div className="plant-left">
-            <img height={'400px'} src="https://ozgrozer.github.io/hdt/objects/sceneHomePlant.svg"/>
+            <img
+              height={"400px"}
+              src="https://ozgrozer.github.io/hdt/objects/sceneHomePlant.svg"
+            />
           </div>
 
           <div className="plant-center">
-            
-            We do not store any documents. <a href="https://github.com/shashanoid/Simpdf">Github</a>
+            We do not store any documents.{" "}
+            <a href="https://github.com/shashanoid/Simpdf">Github</a>
           </div>
-
 
           <div className="plant-right">
-            <img height={'400px'} src="https://ozgrozer.github.io/hdt/objects/scenePlantPlantLeft.svg"/>
+            <img
+              height={"400px"}
+              src="https://ozgrozer.github.io/hdt/objects/scenePlantPlantLeft.svg"
+            />
           </div>
-
-          
         </div>
       </div>
     );

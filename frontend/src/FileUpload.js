@@ -2,7 +2,7 @@ import React from "react";
 
 import { uploadService } from "./utils";
 import { history } from "./history";
-import "./fileupload.css"
+import "./fileupload.css";
 
 // Redux
 import { bindActionCreators } from "redux";
@@ -15,12 +15,14 @@ class FileUpload extends React.Component {
 
     this.state = {
       imageURL: "",
+      isLoading: false,
     };
 
-    this.handleUploadImage = this.handleUploadImage.bind(this);
+    this.handleUpload = this.handleUpload.bind(this);
   }
 
-  async handleUploadImage(ev) {
+  async handleUpload(ev) {
+    this.setState({ isLoading: true });
     ev.preventDefault();
 
     const data = new FormData();
@@ -29,12 +31,22 @@ class FileUpload extends React.Component {
     await uploadService.uploadFile(data).then((response) => {
       this.props.storehtmldata(response.data);
       history.push("/edit");
+      this.setState({ isLoading: false });
     });
   }
 
-  render() {
+  renderLoader() {
     return (
-      <form className="form-container" onSubmit={this.handleUploadImage}>
+      <div>
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    );
+  }
+
+  renderFileUpload() {
+    return (
+      <form className="form-container" onSubmit={this.handleUpload}>
         <div>
           <input
             ref={(ref) => {
@@ -45,9 +57,18 @@ class FileUpload extends React.Component {
         </div>
         <br />
         <div>
-          <button>Parse</button>
+          <button className="parse-container">Parse</button>
         </div>
       </form>
+    );
+  }
+
+  render() {
+    let { isLoading } = this.state;
+    return (
+      <div class="spinner">
+        {isLoading ? this.renderLoader() : this.renderFileUpload()}
+      </div>
     );
   }
 }
