@@ -18,7 +18,7 @@ export default class HomePage extends React.Component {
           <h1 className="title">Simpdf :: Minimal PDF editor</h1>
           <p>
             {" "}
-            <b>Double click</b> the elements to edit, and save page as PDF
+            <b>Double click</b> page elements to edit
           </p>
           <br />
           <FileUpload />
