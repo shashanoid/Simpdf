@@ -15,12 +15,13 @@ logger = logging.getLogger('HELLO WORLD')
 BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 
 
-UPLOAD_FOLDER = '/Users/shashwatsingh/Desktop/work/Simpdf/backend/upload'
-PDF_TO_HTML_FOLDER = '/Users/shashwatsingh/Desktop/work/Simpdf/backend/pdf2html/'
+UPLOAD_FOLDER = '/root/Simpdf/backend/upload'
+PDF_TO_HTML_FOLDER = '/root/Simpdf/backend/pdf2html/'
 
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
+CORS(app)
 celery = Celery(app.name, broker=BROKER_URL)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -68,6 +69,5 @@ def fileUpload():
 
 if __name__ == "__main__":
     app.secret_key = os.urandom(24)
-    app.run(debug=True,host="0.0.0.0",use_reloader=True)
+    app.run(debug=True,host="159.203.182.171",port=5000,use_reloader=True)
 
-flask_cors.CORS(app)
