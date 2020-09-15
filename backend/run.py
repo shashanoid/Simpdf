@@ -14,9 +14,9 @@ logger = logging.getLogger('HELLO WORLD')
 
 BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 
-
 UPLOAD_FOLDER = '/root/Simpdf/backend/upload'
 PDF_TO_HTML_FOLDER = '/root/Simpdf/backend/pdf2html/'
+
 
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
