@@ -22,7 +22,7 @@ const getCsrf = () => {
 export { getCsrf };
 
 function uploadFile(data) {
-  return axios.post(`http://localhost:3000/upload`, data, {
+  return axios.post(`https://api.simpdf.com/upload`, data, {
     headers: {
       "X-CSRFToken": getCsrf(),
     },
