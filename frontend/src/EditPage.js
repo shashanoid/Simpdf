@@ -31,6 +31,17 @@ class HomePage extends React.Component {
     return true;
   }
 
+  startEditor () {
+    const pages = document.querySelectorAll(".pc"),
+    editor = new MediumEditor(pages, { toolbar: {
+      buttons: ['bold', 'italic', 'underline', 'anchor'],
+    }})
+  }
+
+  componentDidMount () {
+    this.startEditor()
+  }
+
   errorpage() {
     return (
       <div>
