@@ -18,10 +18,6 @@ Demo: https://simpdf.com/
 `pip install -r requirements.txt`
 
   
-
-Edit **UPLOAD_FOLDER** and **PDF_TO_HTML_FOLDER** variables in `run.py`
-
-`brew install pdf2htmlEX`
   
 Run server: 
 
