@@ -15,8 +15,6 @@ logger = logging.getLogger('HELLO WORLD')
 BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 
 UPLOAD_FOLDER = '/Users/shashwatsingh/Desktop/Simpdf/backend/upload'
-PDF_TO_HTML_FOLDER = '/Users/shashwatsingh/Desktop/Simpdf/backend/pdf2html/'
-
 
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
@@ -29,8 +27,6 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def convert2html(self, file):
     print(file)
     filename = file.split('/')[-1]
-    command = 'pdf2htmlEX --external-hint-tool=ttfautohint {} ./pdf2html/{}.html'.format(file, filename)
-    # print ("Executing " + command)
     process = subprocess.Popen(command, stdout = subprocess.PIPE, shell=True)
     output, err = process.communicate()
     
