@@ -5,7 +5,7 @@
 
 Simple pdf editor while preserving structure and format.
 
-Demo: https://simpdf.com/
+Producthunt: https://www.producthunt.com/products/simpdf#simpdf
 
   
 
