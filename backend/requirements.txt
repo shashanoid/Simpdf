@@ -24,7 +24,7 @@ flake8-absolute-import==1.0
 flake8-isort==3.0.0
 flake8-quotes==3.2.0
 Flask==1.1.2
-Flask-Cors==3.0.8
+Flask-Cors==4.0.1
 idna==2.9
 importlib-metadata==1.6.0
 isort==4.3.21
