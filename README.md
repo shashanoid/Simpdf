@@ -3,13 +3,14 @@
 
   
 
-Simple pdf editor while preserving structure and format.
+Simple pdf editor while preserving structure and format. This is just a glorified hack.
 
-Producthunt: https://www.producthunt.com/products/simpdf#simpdf
+Producthunt: https://www.producthunt.com/products/simpdf#simpdf (lol)
+<img width="985" alt="Screenshot 2024-10-04 at 5 41 43 PM" src="https://github.com/user-attachments/assets/76089d7c-671f-40c5-adaf-1d98046d643d">
 
   
 
-## TO Run
+## To Run
 
 `cd backend`
 
